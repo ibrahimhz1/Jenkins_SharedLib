@@ -1,7 +1,4 @@
 def call(){
-  dependencyCheck(
-        additionalArguments: '--scan ./ --disableNvd',
-        odcInstallation: 'OWASP'
-    )
+  dependencyCheck additionalArguments: '--scan ./', odcInstallation: 'OWASP'
   dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
 }
